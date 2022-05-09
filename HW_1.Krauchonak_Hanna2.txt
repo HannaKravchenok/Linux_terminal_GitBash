@@ -1,0 +1,21 @@
+1) Отправить http запрос на сервер - curl http://162.55.220.72:5005/terminal-hw-request
+curl "http://162.55.220.72:5005/get_method?name=MyCatIs&age=8"
+curl -d POST "http://162.55.220.72:5005/get_method?name=mystring&age=456"
+
+
+2) Написать скрипт, который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 
+
+nano myscript.sh
+Далее попадаем в редактор для написания скрипта
+#!/bin/bash
+cd Домашняя_работа
+mkdir papka1 papka2 papaka3
+cd papka1
+touch 11.txt 22.txt 33.txt 11.json 22.json
+mkdir papka4 papka5 papka6
+cd ..
+ls -la
+mv papka1/{11.txt,11.json} papka2
+Ctrl+O - записать
+Ctrl+X - выйти
+Запустить скрипт bash myscript.sh
